@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog developed for business",
+  "main": "main.js",
+  "repository": "https://github.com/aaroncastle/blog.git",
+  "author": "aaron-dev <magnumcastle@icloud.com>",
+  "license": "Apache-2.0",
+  "private": true
+}
