@@ -2,9 +2,30 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "blog developed for business",
-  "main": "main.js",
-  "repository": "https://github.com/aaroncastle/blog.git",
+  "type": "module",
+  "main": "./src/main.ts",
+  "repository": "https://github.com/aaroncastle/blog",
   "author": "aaron-dev <magnumcastle@icloud.com>",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "nodemonConfig": {
+    "delay": 0,
+    "ext": "ts",
+    "ignore": [
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "node --loader ts-node/esm ./src/main.ts"
+  },
+  "scripts": {
+    "dev": "nodemon"
+  }
 }

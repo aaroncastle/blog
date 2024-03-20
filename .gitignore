@@ -2,7 +2,7 @@ node_modules/
 logs/
 dist/
 .npm
-.DS_Store/
+.DS_Store
 .idea/
 .yarn/cache
 .yarn/unplugged
