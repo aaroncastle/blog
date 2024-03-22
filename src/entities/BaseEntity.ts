@@ -8,6 +8,9 @@ import "reflect-metadata"
 import { validate } from "class-validator"
 import { ClassConstructor, plainToInstance } from "class-transformer"
 
+/**
+ * 抽象类
+ */
 export abstract class BaseEntity {
     public async validateSelf(skipMissingProperties = false): Promise<string[]> {
         const errors = await validate(this, {
