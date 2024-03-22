@@ -29,5 +29,8 @@
   },
   "scripts": {
     "dev": "nodemon"
+  },
+  "dependencies": {
+    "mongoose": "^8.2.2"
   }
 }
