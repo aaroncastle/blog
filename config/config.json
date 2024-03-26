@@ -1,3 +1,4 @@
 {
-  "defaultAvatar": "https://mdrs.oss-cn-hangzhou.aliyuncs.com/upic/00028-2917400270.png"
+  "defaultAvatar": "https://mdrs.oss-cn-hangzhou.aliyuncs.com/upic/00028-2917400270.png",
+  "mongoDBBasename": "blog"
 }
