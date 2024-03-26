@@ -33,5 +33,6 @@
   "dependencies": {
     "mongoose": "^8.2.2",
     "mongoose-paranoid-plugin": "^1.1.2"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }

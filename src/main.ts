@@ -5,9 +5,20 @@
  * @GitHub: https://github.com/aaroncastle/blog
  */
 
-import {createRequire} from "module"
-const json = createRequire(import.meta.url);
-const file = json('../config/config.json')
-console.log(file)
+import { createRequire } from "module"
+import { connect } from "mongoose"
+import { ArticleModel } from "./db/articleSchema.js";
 
+const json = createRequire(import.meta.url);
+const userConfig = json('../config/config.json')
+
+
+connect(`mongodb://localhost:27017/${ userConfig.mongoDBBasename }`)
+    .then(() => {
+        console.log("database has been started")
+        ArticleModel.find().then(r => console.log(r))
+    })
+    .catch(_ => {
+        console.log("connect database failed，check database port (mongodb database default port is 27017)")
+    })
 
