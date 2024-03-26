@@ -10,7 +10,7 @@ import { IArticle } from "../types/IArticle.js";
 import mongooseParanoidPlugin from "mongoose-paranoid-plugin"
 plugin(mongooseParanoidPlugin, { field: "deletedAt" })
 set("strictQuery", true)
-const blogSchema = new Schema<IArticle>(
+const articleSchema = new Schema<IArticle>(
     {
         title: String,
         content: String,
@@ -30,4 +30,4 @@ const blogSchema = new Schema<IArticle>(
     }
 )
 
-export const ArticleModel = model<IArticle>("article", blogSchema)
+export const ArticleModel = model<IArticle>("article", articleSchema)
