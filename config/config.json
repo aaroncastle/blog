@@ -1,4 +1,8 @@
 {
   "defaultAvatar": "https://mdrs.oss-cn-hangzhou.aliyuncs.com/upic/00028-2917400270.png",
-  "mongoDBBasename": "blog"
+  "mongoDBBasename": "blog",
+  "mongoDBServer": {
+    "domain": "db.com",
+    "port": 80
+  }
 }

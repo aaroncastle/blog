@@ -12,6 +12,7 @@
     "@types/node": "^20.11.30",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
+    "cross-env": "^7.0.3",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
@@ -28,7 +29,7 @@
     "exec": "node --loader ts-node/esm ./src/main.ts"
   },
   "scripts": {
-    "dev": "nodemon"
+    "dev": "cross-env NODE_ENV=development nodemon"
   },
   "dependencies": {
     "mongoose": "^8.2.2",

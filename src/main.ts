@@ -12,8 +12,8 @@ import { ArticleModel } from "./db/articleSchema.js";
 const json = createRequire(import.meta.url);
 const userConfig = json('../config/config.json')
 
-
-connect(`mongodb://localhost:27017/${ userConfig.mongoDBBasename }`)
+const mongoConfig = userConfig['mongoDBServer'] ? {server: userConfig['mongoDBServer']['domain'],port: userConfig['mongoDBServer']['port']}: {server: 'localhost',port: 27017}
+connect(`mongodb://${mongoConfig.server}:${mongoConfig.port}/${ userConfig.mongoDBBasename }`)
     .then(() => {
         console.log("database has been started")
         ArticleModel.find().then(r => console.log(r))
