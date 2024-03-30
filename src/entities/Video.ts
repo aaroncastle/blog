@@ -82,7 +82,7 @@ export class Video extends BaseEntity {
 
     @IsNotEmpty({ message: "视频标识符(tags)不能为空" })
     @IsArray({ message: "视频标识符(tags)只能是字符串型数组" })
-    @ArrayMinSize(1, { message: "视频标识(tags)至少有一个，比如演员名字" })
+    @ArrayMinSize(1, { message: "视频标识(tags)至少有一个，比如'战争','科幻','励志'等，用于类型分类" })
     @Type(() => String)
     public tags: string[]
 
